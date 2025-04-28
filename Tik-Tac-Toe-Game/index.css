@@ -1,0 +1,152 @@
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body with teal-green background */
+body {
+  background-color: #548687;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Game container, top-aligned */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* h1 styling */
+h1 {
+  color: #e8e86e; /* Creamy yellow */
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 3x3 game grid */
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+/* Base box styling */
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 8vmin;
+  color: #b0413e; /* Deep red text for X and O */
+  background-color: #ffffc7; /* Default creamy yellow */
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Red background for X boxes */
+.box.x {
+  background-color: #FF4D4D !important; /* Muted red for X */
+}
+
+/* Black background for O boxes */
+.box.o {
+  background-color: #191913 !important; /* Black for O */
+}
+
+/* Reset button */
+#reset-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* New game button */
+#new-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Win/draw message */
+#msg {
+  color: #def22d;
+  font-size: 8vmin;
+}
+
+/* Message container */
+.msg-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  z-index: 10;
+}
+
+/* Hide class */
+.hide {
+  display: none;
+}
+
+/* Controls container */
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 1rem;
+  color: #1e1e0a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .box {
+    height: 16vmin;
+    width: 16vmin;
+    font-size: 7vmin;
+  }
+
+  .game {
+    height: 55vmin;
+    width: 55vmin;
+    gap: 1vmin;
+  }
+
+  #reset-btn, #new-btn {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  #msg {
+    font-size: 4vmin;
+  }
+}
